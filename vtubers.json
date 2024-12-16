@@ -193,8 +193,8 @@
         "id": 20,
         "name": "Shishiro Botan",
         "language": "Japanese",
-        "age": 20,
-        "birthday": "20+",
+        "age": 20+,
+        "birthday": "8 September",
         "height": "166cm",
         "zodiac": "Virgo",
         "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/d/d9/Shishiro_Botan_Portrait.png"
