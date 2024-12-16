@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "name": "Takanashi Kiara",
+        "language": "English",
+        "age": "Eternal",
+        "birthday": "6 July",
+        "height": "165cm",
+        "zodiac": "Cancer",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/2/28/Takanashi_Kiara_Portrait.png"
+    },
+    {
+        "id": 2,
+        "name": "Pavolia Reine",
+        "language": "English",
+        "age": "??",
+        "birthday": "9 September",
+        "height": "172cm",
+        "zodiac": "Virgo",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/d/d2/Pavolia_Reine_Portrait.png"
+    },
+    {
+        "id": 3,
+        "name": "Ouro Kronii",
+        "language": "English",
+        "age": "Infinity",
+        "birthday": "14 March",
+        "height": "168cm",
+        "zodiac": "Pisces",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/b/b2/Ouro_Kronii_Portrait.png"
+    },
+    {
+        "id": 4,
+        "name": "Ninomae Ina'nis",
+        "language": "English",
+        "age":"----",
+        "birthday": "20 May",
+        "height": "157cm",
+        "zodiac": "Taurus",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/46/Ninomae_Ina%27nis_Portrait.png"
+    },
+    {
+        "id": 5,
+        "name": "Nanashi Mumei",
+        "language": "English",
+        "age": "???????",
+        "birthday": "4 August",
+        "height": "156cm",
+        "zodiac": "Leo",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/8/86/Nanashi_Mumei_Portrait.png"
+    },
+    {
+        "id": 6,
+        "name": "Mori Calliope",
+        "language": "English",
+        "age": "No",
+        "birthday": "4 April",
+        "height": "167cm",
+        "zodiac": "Aries",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/3/39/Mori_Calliope_Portrait.png"
+    },
+    {
+        "id": 7,
+        "name": "Gawr Gura",
+        "language": "English",
+        "age": "9000+",
+        "birthday": "20 June",
+        "height": "141cm",
+        "zodiac": "Gemini",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/4f/Gawr_Gura_Portrait.png"
+    },
+    {
+        "id": 8,
+        "name": "IRyS",
+        "language": "English",
+        "age": "As long as hope has been in your heart",
+        "birthday": "& March",
+        "height": "166cm",
+        "zodiac": "Pisces",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/5/5b/IRyS_2022_Portrait.png"
+    },
+    {
+        "id": 9,
+        "name": "Kiryu Coco",
+        "language": "English",
+        "age": 3502,
+        "birthday": "17 June",
+        "height": "Human form: 180cm,Dragon Form: 7m",
+        "zodiac": "Gemini",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/0/09/Kiryu_Coco_-_Portrait.png"
+    },
+    {
+        "id": 10,
+        "name": "Ceres Fauna",
+        "language": "English",
+        "age": "4.54 Bilion years old",
+        "birthday": "21 March",
+        "height": "164cm",
+        "zodiac": "Aries",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/7/73/Ceres_Fauna_Portrait.png"
+    },
+    {
+        "id": 11,
+        "name": "Tokino Sora",
+        "language": "Japanese",
+        "age": "Secret",
+        "birthday": "15 May",
+        "height": "160cm",
+        "zodiac": "Taurus",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/4b/Tokino_Sora_2020_Portrait.png"
+    },
+    {
+        "id": 12,
+        "name": "Hoshimachi Suisei",
+        "language": "Japanese",
+        "age": 18,
+        "birthday": "22 March",
+        "height": "160cm",
+        "zodiac": "Aries",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png"
+    },
+    {
+        "id": 13,
+        "name": "Houshou Marine",
+        "language": "Japanese",
+        "age": 17,
+        "birthday": "30 July",
+        "height": "150cm",
+        "zodiac": "Leo",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/4e/Houshou_Marine_-_Portrait.png"
+    },
+    {
+        "id": 14,
+        "name": "Kiryu Coco",
+        "language": "Japanese",
+        "age": 3502,
+        "birthday": "17 June",
+        "height": "Human form: 180cm,Dragon Form: 7m",
+        "zodiac": "Gemini",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/0/09/Kiryu_Coco_-_Portrait.png"
+    },
+    {
+        "id": 15,
+        "name": "Oozora Subaru",
+        "language": "Japanese",
+        "age": 17,
+        "birthday": "2 July",
+        "height": "154cm",
+        "zodiac": "Cancer",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/49/Oozora_Subaru_Portrait.png"
+    },
+    {
+        "id": 16,
+        "name": "Sakura Miko",
+        "language": "Japanese",
+        "age": 18.6,
+        "birthday": "5 March",
+        "height": "152cm",
+        "zodiac": "Pisces",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/7/7f/Sakura_Miko_2020_Portrait.png"
+    },
+    {
+        "id": 17,
+        "name": "Shirakami Fubuki",
+        "language": "Japanese",
+        "age": "18 (102 years old in fox years)",
+        "birthday": "5 October",
+        "height": "155cm",
+        "zodiac": "Libra",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/4/45/Shirakami_Fubuki_-_Portrait.png"
+    },
+    {
+        "id": 18,
+        "name": "Uruha Rushia",
+        "language": "Japanese",
+        "age": 1600,
+        "birthday": "22 January",
+        "height": "143cm",
+        "zodiac": "Aquarius",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/a/a2/Uruha_Rushia_-_Portrait.png"
+    },
+    {
+        "id": 19,
+        "name": "Usada Pekora",
+        "language": "Japanese",
+        "age": 111,
+        "birthday": "12 Jannuary",
+        "height": "153cm",
+        "zodiac": "Capricorn",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/2/23/Usada_Pekora_-_Portrait_Transparent.png"
+    },
+    {
+        "id": 20,
+        "name": "Shishiro Botan",
+        "language": "Japanese",
+        "age": 20,
+        "birthday": "20+",
+        "height": "166cm",
+        "zodiac": "Virgo",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/d/d9/Shishiro_Botan_Portrait.png"
+    }
+]

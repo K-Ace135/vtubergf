@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental VTuber Girlfriend</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+            color: #4a4a4a;
+        }
+        header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ff1493);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #ffe4e9;
+}
+
+/* Animated Background Effect */
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ffb6c1 10%, transparent 70%);
+    animation: pulse 10s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            color: #ff1493;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .category {
+            margin-bottom: 3rem;
+        }
+        .category h2 {
+            font-size: 2rem;
+            color: #ff69b4;
+            text-align: center;
+            background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: linear-gradient(135deg, #ffffff, #ffe4e9);
+            border: 2px solid #ffb6c1;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 50%;
+            border: 3px solid #ff69b4;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            margin: 0.5rem 0;
+            color: #ff69b4;
+            font-size: 1.5rem;
+        }
+        .card button {
+            background: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+        }
+        .card button:hover {
+            background: #ff1493;
+            transform: scale(1.1);
+        }
+        .profile-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
+            padding: 2rem;
+            text-align: center;
+            z-index: 1000;
+        }
+        .profile-modal img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .profile-modal h2 {
+            margin: 0;
+            color: #ff69b4;
+        }
+        .profile-modal p {
+            color: #333;
+            margin: 0.5rem 0;
+        }
+        .profile-modal button {
+            background: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .profile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+        footer {
+            background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            border-top: 5px solid #ff1493;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        footer a:hover {
+            color: #ffe4e9;
+            text-decoration: underline;
+        }
+        .logo-icon {
+    height: 60px; /* Adjust size as needed */
+    width: 60px;
+    border-radius: 50%; 
+    border: 3px solid #ff69b4; /* Matches the website's aesthetic */
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); /* Adds a soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5); /* Enhanced shadow on hover */
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #ff69b4;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffe4e9;
+    color: #ff1493;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.see-all-button {
+    display: block;
+    margin: 1rem auto;
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+
+.see-all-button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo" style="position: absolute; top: 10px; left: 10px;">
+            <img src="VgfLogo.jpg" alt="Company Logo" class="logo-icon" onclick="location.reload();">
+        </div>
+        <div class="header-content">
+            <h1>Rental VTuber Girlfriend</h1>
+            <p>Your gateway to virtual romance in VRChat</p>
+        </div>
+    </header>    
+    <nav>
+        <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-button">Profiles ▼</a>
+            <div class="dropdown-content">
+                <a href="#english-title">English VTubers</a>
+                <a href="#japanese-title">Japanese VTubers</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+       
+    <div class="container">
+        <section id="profiles">
+            <div class="category">
+                <h2 id="english-title">English-Speaking VTubers</h2>
+                <div class="grid" id="english-vtubers"></div>
+                <button class="see-all-button" id="see-all-english" onclick="showAll('english-vtubers')">See All</button>
+            </div>
+            <div class="category">
+                <h2 id="japanese-title">Japanese-Speaking VTubers</h2>
+                <div class="grid" id="japanese-vtubers"></div>
+                <button class="see-all-button" id="see-all-japanese" onclick="showAll('japanese-vtubers')">See All</button>
+            </div>
+        </section>
+        
+        <section id="about" class="container">
+            <div class="about-content" style="
+                text-align: center;
+                background: #fff;
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                max-width: 800px;
+                margin: 2rem auto;
+            ">
+                <h2 style="color: #ff69b4; font-size: 2.5rem; margin-bottom: 1rem;">About Us</h2>
+                <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.8;">
+                    Welcome to <strong>Rental VTuber Girlfriend</strong>! We are passionate about connecting people with their favorite virtual companions. Whether you're looking for an engaging virtual presence for gaming, VRChat, or events, our diverse roster of VTubers is here to make your experience unforgettable.
+                </p>
+                <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.8;">
+                    Our platform features talented VTubers who specialize in different languages, personalities, and styles. We aim to bring smiles, virtual companionship, and joy to everyone, anytime, anywhere.
+                </p>
+                <p style="color: #ff69b4; font-size: 1.2rem; margin-top: 2rem;">
+                    Let's make every virtual moment special!
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    <div class="profile-overlay" id="profile-overlay" onclick="closeProfile()"></div>
+    <div class="profile-modal" id="profile-modal"></div>
+    <footer id="contact">
+        <p>&copy; 2024 Rental VTuber Girlfriend. All rights reserved. | <a href="#contact">Contact Us</a></p><br>
+        <div class="contact-details">
+            <p><strong>LINE:</strong> @RentalVtuberGf</p>
+            <p><strong>Email:</strong> <a href="mailto:RentalVtuberGf@gmail.com">RentalVtuberGf@gmail.com</a></p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+    </script>
+    
+    <script>
+        let vtubers = [];
+
+        function renderProfiles() {
+            const englishContainer = document.getElementById("english-vtubers");
+            const japaneseContainer = document.getElementById("japanese-vtubers");
+
+            vtubers.forEach(vtuber => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <img src="${vtuber.image}" alt="${vtuber.name} Avatar">
+                    <h3>${vtuber.name}</h3>
+                    <button onclick="viewProfile(${vtuber.id})">View Profile</button>
+                `;
+
+                if (vtuber.language === "English") {
+                    englishContainer.appendChild(card);
+                } else {
+                    japaneseContainer.appendChild(card);
+                }
+            });
+        }
+
+        function viewProfile(id) {
+            const vtuber = vtubers.find(v => v.id === id);
+            if (vtuber) {
+                const modal = document.getElementById("profile-modal");
+                const overlay = document.getElementById("profile-overlay");
+
+                modal.innerHTML = `
+                    <img src="${vtuber.image}" alt="${vtuber.name}">
+                    <h2>${vtuber.name}</h2>
+                    <p><strong>Age:</strong> ${vtuber.age}</p>
+                    <p><strong>Birthday:</strong> ${vtuber.birthday}</p>
+                    <p><strong>Height:</strong> ${vtuber.height}</p>
+                    <p><strong>Zodiac:</strong> ${vtuber.zodiac}</p>
+                    <button onclick="closeProfile()">Close</button>
+                `;
+
+                overlay.style.display = "block";
+                modal.style.display = "block";
+            }
+        }
+
+        function closeProfile() {
+            document.getElementById("profile-modal").style.display = "none";
+            document.getElementById("profile-overlay").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('./vtubers.json')
+                .then(response => response.json())
+                .then(data => {
+                    vtubers = data;
+                    renderProfiles();
+                })
+                .catch(error => console.error("Error fetching JSON:", error));
+        });
+        function renderProfiles() {
+    const englishContainer = document.getElementById("english-vtubers");
+    const japaneseContainer = document.getElementById("japanese-vtubers");
+
+    // Clear the containers
+    englishContainer.innerHTML = "";
+    japaneseContainer.innerHTML = "";
+
+    // Render English VTubers
+    vtubers
+        .filter(vtuber => vtuber.language === "English")
+        .slice(0, 4) // Show only the first 5 cards
+        .forEach(vtuber => createCard(vtuber, englishContainer));
+
+    // Render Japanese VTubers
+    vtubers
+        .filter(vtuber => vtuber.language === "Japanese")
+        .slice(0, 4) // Show only the first 5 cards
+        .forEach(vtuber => createCard(vtuber, japaneseContainer));
+}
+
+function createCard(vtuber, container) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <img src="${vtuber.image}" alt="${vtuber.name} Avatar">
+        <h3>${vtuber.name}</h3>
+        <button onclick="viewProfile(${vtuber.id})">View Profile</button>
+    `;
+    container.appendChild(card);
+}
+
+function showAll(categoryId) {
+    const container = document.getElementById(categoryId);
+
+    // Clear the container
+    container.innerHTML = "";
+
+    // Render all VTubers based on category
+    vtubers
+        .filter(vtuber => (categoryId === "english-vtubers" ? vtuber.language === "English" : vtuber.language === "Japanese"))
+        .forEach(vtuber => createCard(vtuber, container));
+
+    // Hide the "See All" button
+    document.getElementById(`see-all-${categoryId.split("-")[0]}`).style.display = "none";
+}
+
+    </script>
+    <button id="backToTop" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+" onclick="scrollToTop()">&#8679;</button>
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show the button when scrolling down
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+            backToTopButton.style.opacity = '1';
+        } else {
+            backToTopButton.style.opacity = '0';
+            setTimeout(() => {
+                backToTopButton.style.display = 'none';
+            }, 300); // Matches the transition duration
+        }
+    });
+
+    // Smooth scroll to the top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
