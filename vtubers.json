@@ -193,7 +193,7 @@
         "id": 20,
         "name": "Shishiro Botan",
         "language": "Japanese",
-        "age": 20+,
+        "age": "20+",
         "birthday": "8 September",
         "height": "166cm",
         "zodiac": "Virgo",
