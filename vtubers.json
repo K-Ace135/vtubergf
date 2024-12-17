@@ -198,5 +198,15 @@
         "height": "166cm",
         "zodiac": "Virgo",
         "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/d/d9/Shishiro_Botan_Portrait.png"
+    },
+    {
+        "id": 20,
+        "name": "Yuzuki Choco",
+        "language": "Japanese",
+        "age": "28",
+        "birthday": "14 February",
+        "height": "165cm",
+        "zodiac": "Aquarius",
+        "image": "https://static.wikia.nocookie.net/virtualyoutuber/images/a/a8/Yuzuki_Choco_Portrait.png"
     }
 ]
