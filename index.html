@@ -334,7 +334,7 @@ header::before {
             <div class="category">
                 <h2 id="english-title">English-Speaking VTubers</h2>
                 <div class="grid" id="english-vtubers"></div>
-                <button class="see-all-button" id="see-all-english" onclick="showAll('english-vtubers')">See All</button>
+                <button class="see-all-button" id="see-all-english" onclick="showAll('english-vtubers')" >See All</button>
             </div>
             <div class="category">
                 <h2 id="japanese-title">Japanese-Speaking VTubers</h2>
@@ -372,8 +372,8 @@ header::before {
     <footer id="contact">
         <p>&copy; 2024 Rental VTuber Girlfriend. All rights reserved. | <a href="#contact">Contact Us</a></p><br>
         <div class="contact-details">
-            <p><strong>LINE:</strong> @RentalVtuberGf</p>
-            <p><strong>Email:</strong> <a href="mailto:RentalVtuberGf@gmail.com">RentalVtuberGf@gmail.com</a></p>
+            <p><strong>LINE:</strong><br> <img class="lineqr" src="lineid.png" alt="lineid" style="height: 90px; width: 90ppx;"></p>
+            <p><strong>Email:</strong> <a href="mailto:kace13526@gmail.com">kace13526@gmail.com</a></p>
         </div>
     </footer>
     <script>
@@ -424,6 +424,7 @@ header::before {
                     <p><strong>Birthday:</strong> ${vtuber.birthday}</p>
                     <p><strong>Height:</strong> ${vtuber.height}</p>
                     <p><strong>Zodiac:</strong> ${vtuber.zodiac}</p>
+                    <p><strong>VrChat date Hourly Rate:</strong> ${vtuber.hourly_rate}$</p>
                     <button onclick="closeProfile()">Close</button>
                 `;
 
@@ -431,6 +432,7 @@ header::before {
                 modal.style.display = "block";
             }
         }
+        
 
         function closeProfile() {
             document.getElementById("profile-modal").style.display = "none";
