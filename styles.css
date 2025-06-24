@@ -1,0 +1,298 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+    color: #4a4a4a;
+}
+header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ff1493);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #ffe4e9;
+}
+
+/* Animated Background Effect */
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ffb6c1 10%, transparent 70%);
+    animation: pulse 10s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+nav a:hover {
+    color: #ff1493;
+    transform: scale(1.1);
+}
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+.category {
+    margin-bottom: 3rem;
+}
+.category h2 {
+    font-size: 2rem;
+    color: #ff69b4;
+    text-align: center;
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.card {
+    background: linear-gradient(135deg, #ffffff, #ffe4e9);
+    border: 2px solid #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.card img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 3px solid #ff69b4;
+    margin-bottom: 1rem;
+}
+.card h3 {
+    margin: 0.5rem 0;
+    color: #ff69b4;
+    font-size: 1.5rem;
+}
+.card button {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+.card button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+.profile-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+    z-index: 1000;
+}
+.profile-modal img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.profile-modal h2 {
+    margin: 0;
+    color: #ff69b4;
+}
+.profile-modal p {
+    color: #333;
+    margin: 0.5rem 0;
+}
+.profile-modal button {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.profile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+footer {
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    border-top: 5px solid #ff1493;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+footer a:hover {
+    color: #ffe4e9;
+    text-decoration: underline;
+}
+.logo-icon {
+    height: 60px; /* Adjust size as needed */
+    width: 60px;
+    border-radius: 50%; 
+    border: 3px solid #ff69b4; /* Matches the website's aesthetic */
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); /* Adds a soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5); /* Enhanced shadow on hover */
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #ff69b4;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffe4e9;
+    color: #ff1493;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.see-all-button {
+    display: block;
+    margin: 1rem auto;
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+
+.see-all-button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
